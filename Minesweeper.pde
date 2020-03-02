@@ -35,7 +35,7 @@ public void setMines()
         if(!mines.contains(buttons[r][c]))
         {
             mines.add(buttons[r][c]);
-            System.out.println(r + " , " + c);
+                           System.out.println(r + " , " + c);
         }
     }
 }
@@ -61,8 +61,11 @@ public void displayWinningMessage()
 }
 public boolean isValid(int r, int c)
 {
-    //your code here
-    return false;
+    if (r>=0 && r<NUM_ROWS && c>=0 && c<NUM_COLS)
+      return true;
+    else        
+      return false;
+    
 }
 public int countMines(int row, int col)
 {
